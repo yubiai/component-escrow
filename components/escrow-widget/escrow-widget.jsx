@@ -59,7 +59,7 @@ export default function EscrowWidget({
       <Text>
         Precio: {web3.utils.fromWei(String(amount))} {ticker}
       </Text>
-      <Link newTab href={metaEvidenceFileURI}>
+      <Link href={metaEvidenceFileURI}>
         Contract
       </Link>
       <Flex sx={{ justifyContent: 'space-between' }} pt={10}>
@@ -72,14 +72,13 @@ export default function EscrowWidget({
         </Button>
         <Link
           sx={{ alignItems: 'center', display: 'flex' }}
-          newTab
           href="https://kleros.io"
         >
           <p>Por Yubiai y Kleros</p>
         </Link>
         <Button
           colorScheme="blue"
-          loading={loading}
+          //loading={loading}
           onClick={() => {
             loadingRef.current = true
             setLoading(true)

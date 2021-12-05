@@ -31,6 +31,7 @@ export default class KlerosEscrow {
   }
 
   async setCourtAndCurrency(court = 'blockchain-non-technical', currency) {
+    console.log("fer court >>> ", court)
     if (!ethereumAddressRegExp.test(court)) {
       const ETHNetID = (await this.web3.eth.net.getId()) || 42
       court = (currency

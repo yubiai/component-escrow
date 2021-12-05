@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import { ChakraProvider, Container, Stack } from '@chakra-ui/react'
 
 import EscrowWidget from '../components/escrow-widget/escrow-widget'
-import Web3Provider from '../utils/web3-provider'
+//import Web3Provider from '../utils/web3-provider'
 import ProofOfHumanity from '../subgraph/abis/proof-of-humanity.json'
 import KlerosLiquid from '../subgraph/abis/kleros-liquid.json'
 import TransactionBatcher from '../subgraph/abis/transaction-batcher.json'
