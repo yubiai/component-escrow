@@ -12,7 +12,7 @@ export default function EscrowWidget({
   metaEvidence,
   children,
   amount,
-  ticker = 'ETH',
+  ticker = 'UBI',
   recipient,
   timeout,
   onOpen,
@@ -59,9 +59,7 @@ export default function EscrowWidget({
       <Text>
         Precio: {web3.utils.fromWei(String(amount))} {ticker}
       </Text>
-      <Link href={metaEvidenceFileURI}>
-        Contract
-      </Link>
+      <Link href={metaEvidenceFileURI}>Contract</Link>
       <Flex sx={{ justifyContent: 'space-between' }} pt={10}>
         <Button
           // variant="secondary"
@@ -98,6 +96,18 @@ export default function EscrowWidget({
         >
           Pagar
         </Button>
+
+        {/* <div>
+          {console.log(
+            'Fernando Submit Evidence >>> ',
+            klerosEscrowRef.current.submitEvidence(
+              '0x505f44f635d194e2d0898d50dc5885919f6aa2942b0ce4df6ed9a7b7d155ca71',
+              {
+                message: 'Ejemplo de submitEvidence',
+              },
+            ),
+          )}
+        </div> */}
       </Flex>
     </Box>
   )

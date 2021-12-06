@@ -57,7 +57,7 @@ function App({ Component, pageProps }) {
                   'Camera Nikon 83x optical zoom lens, model x32a 9, additional lens.',
                 fileURI: { contract: 'someContractText' },
               }}
-              amount={1e16}
+              amount={1}
               recipient="0x4b93A94ca58594FAF5f64948A26F3E195Eb63B6E"
               timeout={604800}
             />

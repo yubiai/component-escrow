@@ -31,7 +31,7 @@ export default class KlerosEscrow {
   }
 
   async setCourtAndCurrency(court = 'blockchain-non-technical', currency) {
-    console.log("fer court >>> ", court)
+    console.log('fer court >>> ', court)
     if (!ethereumAddressRegExp.test(court)) {
       const ETHNetID = (await this.web3.eth.net.getId()) || 42
       court = (currency
@@ -53,7 +53,7 @@ export default class KlerosEscrow {
             42: {
               general: '0x23c8118ae9fb45a0cb7fcfe3af65d081233d82a5',
               'blockchain-non-technical':
-                '0x01171b3fb9627dd127a6ceb356b4470c492e7a8d',
+                '0x01171b3fb9627dd127a6ceb356b4470c492e7a8d', // este contract funciona
             },
             1: {
               general: '0x0d67440946949fe293b45c52efd8a9b3d51e2522',
@@ -120,7 +120,7 @@ export default class KlerosEscrow {
   async createTransaction(amount, recipient, timeout, metaEvidence) {
     if (this.tokenContract)
       await this.tokenContract.methods
-        .approve(this.contract.options.address, amount)
+        .approve(this.contract.options.address, amount / 1000000000000000000)
         .send()
 
     if (metaEvidence.file) {
